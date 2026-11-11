@@ -1,6 +1,6 @@
-# Sharpa Pilot
+# Sharpa Wave
 
- Sharpa Pilot is the official application for device configuration, monitoring, firmware updates, and routine operations.
+ Sharpa Wave is the official application for device configuration, monitoring, firmware updates, and routine operations.
 
 ---
 
@@ -8,7 +8,7 @@
 
 Download the latest `.deb` package from Releases:
 
-👉 https://github.com/sharpa-robotics/sharpa-pilot/releases
+👉 https://github.com/sharpa-robotics/sharpa-wave/releases
 
 ---
 
@@ -17,7 +17,7 @@ Download the latest `.deb` package from Releases:
 Install the package using:
 
 ```bash
-sudo dpkg -i sharpa-pilot-<version>.deb
+sudo dpkg -i sharpa-wave-<version>.deb
 ```
 
 If there are missing dependencies, run:
@@ -33,7 +33,7 @@ sudo apt-get install -f
 After installation, you can launch the application:
 
 ```bash
-sharpa-pilot
+sharpa-wave
 ```
 
 Or find it in your application menu.
@@ -42,30 +42,30 @@ Or find it in your application menu.
 
 ## 📦 SDK (Linux)
 
-Sharpa Pilot ships with a **matched Sharpa Wave SDK** and manages it automatically.
+Sharpa Wave ships with a **matched Sharpa Wave SDK** and manages it automatically.
 
-### Do not override the SDK used by Pilot
+### Do not override the SDK used by Wave
 
 - **Do not** install, upgrade, or replace `sharpa-wave-sdk` on your own.
-- **Do not** copy or edit files under `/opt/sharpa-wave-sdk/` or `/opt/sharpa-pilot/pilot_sdk` (binaries, `config.yaml`, libraries, etc.) expecting Pilot to keep using your changes.
+- **Do not** copy or edit files under `/opt/sharpa-wave-sdk/` or `/opt/sharpa-wave/wave_sdk` (binaries, `config.yaml`, libraries, etc.) expecting Wave to keep using your changes.
 
-To change the SDK version that Pilot uses, **only upgrade or reinstall `sharpa-pilot`** (same `.deb` workflow as in [Update](#-update)). That is the supported path.
+To change the SDK version that Wave uses, **only upgrade or reinstall `sharpa-wave`** (same `.deb` workflow as in [Update](#-update)). That is the supported path.
 
 ### Where files live (reference)
 
-After `sharpa-pilot` installed, typical layout:
+After `sharpa-wave` installed, typical layout:
 
 | Item | Path |
 |------|------|
-| Pilot application | `/opt/sharpa-pilot/` |
-| Wave SDK root (what Pilot prefers) | `/opt/sharpa-wave-sdk/` |
-| `pilot_sdk` service binary | `/opt/sharpa-wave-sdk/pilot_sdk`, with a copy at `/opt/sharpa-pilot/pilot_sdk` |
+| Wave application | `/opt/sharpa-wave/` |
+| Wave SDK root (what Wave prefers) | `/opt/sharpa-wave-sdk/` |
+| `wave` service binary | `/opt/sharpa-wave-sdk/wave_sdk`, with a copy at `/opt/sharpa-wave/wave_sdk` |
 
-Under `/opt/sharpa-wave-sdk/` you may see `pilot_sdk`, `config.yaml`, `VERSION`, `lib/`, `python/`, `include/`, `sample/`. Treat these as **managed by the Pilot installer**, not as a user-editable SDK install.
+Under `/opt/sharpa-wave-sdk/` you may see `wave_sdk`, `config.yaml`, `VERSION`, `lib/`, `python/`, `include/`, `sample/`. Treat these as **managed by the Wave installer**, not as a user-editable SDK install.
 
 ### Uninstall
 
-Removing `sharpa-pilot` also removes `/opt/sharpa-wave-sdk` and the `sharpa-wave-sdk` package. That is expected; reinstall `sharpa-pilot` if you need Pilot and its SDK again.
+Removing `sharpa-wave` also removes `/opt/sharpa-wave-sdk` and the `sharpa-wave-sdk` package. That is expected; reinstall `sharpa-wave` if you need Wave and its SDK again.
 
 ---
 
@@ -74,7 +74,7 @@ Removing `sharpa-pilot` also removes `/opt/sharpa-wave-sdk` and the `sharpa-wave
 To upgrade to a newer version:
 
 ```bash
-sudo dpkg -i sharpa-pilot-<new-version>.deb
+sudo dpkg -i sharpa-wave-<new-version>.deb
 ```
 
 ---
@@ -84,7 +84,7 @@ sudo dpkg -i sharpa-pilot-<new-version>.deb
 To remove the application:
 
 ```bash
-sudo dpkg -r sharpa-pilot
+sudo dpkg -r sharpa-wave
 ```
 
 ---
